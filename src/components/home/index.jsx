@@ -4,7 +4,7 @@ import "./home.css";
 const Home = () => {
   return (
     <>
-      <div className=" w-screen h-screen main flex justify-center items-center overflow-hidden">
+      <div className=" w-screen min-h-screen main flex justify-center items-center">
         <div className="w-4/5 p-5 flex flex-col md:flex-row justify-around items-center">
           <div className="
           w-48
