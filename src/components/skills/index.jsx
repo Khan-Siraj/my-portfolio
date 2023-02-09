@@ -1,4 +1,12 @@
 import React, { useState } from "react";
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  config,
+  animated,
+  useSpringRef,
+} from '@react-spring/web'
 const skills = [
   {
     name: "JavaScript",
@@ -35,17 +43,28 @@ const skills = [
 ];
 const Skills = () => {
   const [seeMore, setSeeMore] = useState(false);
+  const transApi = useSpringRef()
+  const transition = useTransition(skills.slice(0,4), {
+    ref: transApi,
+    trail: 400 / skills.length,
+    from: { opacity: 0, scale: 0 },
+    enter: { opacity: 1, scale: 1 },
+    leave: { opacity: 0, scale: 0 },
+    config:{duration:1000}
+  })
+  useChain([transApi], [0,0.6])
   return (
     <>
       <div className=" relative ">
         <div className="flex gap-x-2">
-          {skills.map(
-            (item, index) =>
-              index <= 3 && (
-                <div
-                  key={index}
+          {transition(
+            (style, item) =>
+               (
+                <animated.div
+                  style={style}
                   className="md:w-10 md:h-10 w-8 h-8 bg-white border p-1 shadow-lg rounded-full overflow-hidden "
                 >
+                  
                   <img
                     src={item.img}
                     width="100%"
@@ -54,7 +73,7 @@ const Skills = () => {
                     alt={item.name}
                     title={item.name}
                   />
-                </div>
+                </animated.div>
               )
           )}
           <button
