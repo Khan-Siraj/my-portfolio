@@ -10,7 +10,7 @@ const Experience = ()=>{
                     </h1>
                 </div>
                 <div className="w-full flex-grow flex justify-center items-center">
-                    <div className="w-2/4 bg-slate-800 shadow-lg p-4 rounded">
+                    <div className="md:w-2/4 bg-slate-800 shadow-lg p-4 rounded">
                         <ol className="list-decimal px-3">
                             <li className=" text-white font-semibold mb-3">
                                 Six month experience as a Freelance FullStack Developer
@@ -19,7 +19,7 @@ const Experience = ()=>{
                                 <h1 className="text-lg font-bold">
                                     Software EngineerKairos Magus Private Limited | 2021-22
                                 </h1>
-                               <div className="px-3">
+                               <div className="px-2 md:px-3">
                                     <ul className="list-disc">
                                             <li className=" text-white font-semibold">Got 6 months  training from Kairosmagus’s developers.</li>
                                             <li className=" text-white font-semibold">Work on a project with my trainers and still gather experiences and knowledge.</li>

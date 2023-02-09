@@ -30,7 +30,7 @@ const Home = () => {
           <div className="flex flex-col justify-center items-center gap-y-2 md:items-start">
             <h1 className=" text-4xl md:text-9xl mb-2 font-bold animate__animated animate__backInDown animate__slow">Siraj Khan</h1>
             <h1 className=" text-2xl md:text-4xl font-bold animate__animated animate__backInUp animate__slow">Full Stack Developer</h1>
-            <div className="mt-2 animate__animated animate__fadeIn animate__delay-2s">
+            <div className="mt-2">
                 <Skills />
             </div>
           </div>
